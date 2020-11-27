@@ -4,7 +4,7 @@
 
 ### Simple Tic-Tac-Toe PWA created with Angular.
 
-- Installable on Windows desktop as traditional desktop app
+- Installable as traditional desktop app
 
 #### Styling
 
