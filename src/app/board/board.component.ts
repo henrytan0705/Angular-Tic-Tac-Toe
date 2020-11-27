@@ -27,7 +27,7 @@ export class BoardComponent implements OnInit {
   }
 
   makeMove(squareIdx: number) {
-    if (this.gameOver()) return;
+    if (this.winnerFound() || this.tie()) return;
 
     // if square is empty fill in square
     if (!this.squares[squareIdx]) {
@@ -64,8 +64,11 @@ export class BoardComponent implements OnInit {
     return null;
   }
 
-  gameOver() {
+  winnerFound() {
     if (this.winner) return true;
-    if (this.squares.every(val => val !== null)) return true;
+  }
+
+  tie() {
+    if (this.squares.every(val => val !== null) && !this.winner) return true;
   }
 }
